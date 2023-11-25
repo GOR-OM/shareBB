@@ -35,9 +35,15 @@ const PriceAnalysis = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('https://bearbull-qpng.onrender.com/getdata');
-        const data = res.data;
-        setShare(data);
+        const storedData = sessionStorage.getItem('priceAnalysisData');
+        if (storedData) {
+          setShare(JSON.parse(storedData));
+        } else {
+          const res = await axios.get('https://bearbull-qpng.onrender.com/getdata');
+          const data = res.data;
+          setShare(data);
+          sessionStorage.setItem('priceAnalysisData', JSON.stringify(data));
+        }
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -46,7 +52,7 @@ const PriceAnalysis = () => {
     };
 
     fetchData();
-  }, []); // Run only once when the component mounts
+  }, []); 
 
   return (
     <div>
