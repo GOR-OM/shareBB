@@ -1,6 +1,6 @@
 // StockDetails.js
-const { configDotenv } = require('dotenv');
-require('dotenv').config()
+// const { configDotenv } = require('dotenv');
+// require('dotenv').config()
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
@@ -80,9 +80,9 @@ const StockDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`${process.env.URL}/getdata`);
+        const res = await axios.get("https://bearbull-qpng.onrender.com/getdata");
         const res2 = await axios.get(
-          `${process.env.URL}/ml_data?company=tata`,
+          "https://bearbull-qpng.onrender.com/ml_data?company=tata",
           { headers }
         );
 

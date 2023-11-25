@@ -24,7 +24,7 @@ const Comments =  () => {
   const handleUser=async (e)=>{
     try{
     
-      const res = await axios.get('http://localhost:7000/getuser',{headers})
+      const res = await axios.get("https://bearbull-qpng.onrender.com/getuser",{headers})
     console.log(res)
     const username = res.data.username
     
@@ -50,7 +50,7 @@ const Comments =  () => {
   
     try {
       const res = await axios.post(
-        'http://localhost:7000/addComments',
+        "https://bearbull-qpng.onrender.com/addComments",
         { comment: comments, company: 'SBI', username: username },
         { headers: headers }
       );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import secureLocalStorage from "react-secure-storage";
 import { ToastContainer, toast } from 'react-toastify'
-require('dotenv').config()
+// require('dotenv').config()
 import image from "../Images/hero.png";
 import axios from "axios";
 import "../style/Profile.css";
@@ -31,7 +31,7 @@ const Profile = () => {
     try {
         console.log(user)
       const res = await axios.post(
-        `${process.env.URL}/editProfile`,
+        "https://bearbull-qpng.onrender.com/editProfile",
          user,
         { headers }
       );

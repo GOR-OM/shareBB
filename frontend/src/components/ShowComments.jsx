@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-const { configDotenv } = require('dotenv');
+// const { configDotenv } = require('dotenv');
 import "../style/showComments.css";
 import axios from "axios";
-require('dotenv').config()
+// require('dotenv').config()
 const ShowComments = () => {
   const token = localStorage.getItem("authToken");
   // console.log(token)
@@ -15,7 +15,7 @@ const ShowComments = () => {
       "auth-token": token,
     };
     const res = await axios.post(
-      `${process.env.URL}/getComments`,
+      "https://bearbull-qpng.onrender.com/getComments",
       { company: "SBI" },
       { headers }
     );

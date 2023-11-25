@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Stock from './Stock';
 import Loader from './Loader';
 import { toast } from 'react-toastify';
-require('dotenv').config()
+// require('dotenv').config()
 const PriceAnalysis = () => {
   const [share, setShare] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ const PriceAnalysis = () => {
 
   const handleaddfav = async (e) => {
     try {
-      const res = await axios.post(`${process.env.URL}/add-fav`, { company: e }, { headers });
+      const res = await axios.post('https://bearbull-qpng.onrender.com/add-fav', { company: e }, { headers });
       const data = res.status;
       if (data === 200) {
         toast.success('Added to Favourites');
@@ -35,7 +35,7 @@ const PriceAnalysis = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`${process.env.URL}/getdata`);
+        const res = await axios.get('https://bearbull-qpng.onrender.com/getdata');
         const data = res.data;
         setShare(data);
       } catch (error) {

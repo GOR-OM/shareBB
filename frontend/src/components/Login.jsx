@@ -5,8 +5,8 @@ import { useState,useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify'
 import  secureLocalStorage  from  "react-secure-storage";
-const { configDotenv } = require('dotenv');
-require('dotenv').config()
+// const { configDotenv } = require('dotenv');
+// require('dotenv').config()
 import axios from "axios";
 
 import React from "react";
@@ -41,7 +41,7 @@ const Login = () => {
       try
       {
         const res = await axios
-          .post(`${process.env.URL}/login`, {
+          .post("https://bearbull-qpng.onrender.com/login", {
 
             email: form.email,
             password: form.password

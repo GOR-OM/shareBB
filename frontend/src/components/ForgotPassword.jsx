@@ -39,7 +39,7 @@ function Forgotpassword() {
         }
         else {
             const res = await axios
-                .post("http://localhost:7000/forgotPassword", {
+                .post("https://bearbull-qpng.onrender.com/forgotPassword", {
                     email: form.email,
                 })
             toast.success('Otp sent')
@@ -52,7 +52,7 @@ function Forgotpassword() {
             toast.error("OTP is required");
         } else {
             try {
-                const res = await axios.post("http://localhost:7000/otp_verification", {
+                const res = await axios.post("https://bearbull-qpng.onrender.com/otp_verification", {
                     email: form.email,
                     otp: form.otp
                 });
@@ -92,7 +92,7 @@ function Forgotpassword() {
         }
         else {
             try {
-                const res = await axios.post("http://localhost:7000/updatePassword", {
+                const res = await axios.post("https://bearbull-qpng.onrender.com/updatePassword", {
                     email: form.email,
                     newPass: password.newPass
                 });

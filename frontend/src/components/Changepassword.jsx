@@ -46,7 +46,7 @@ function Changepassword() {
       };
       console.log(headers);
       const res = await axios.post(
-        "http://localhost:7000/changePassword",
+        "https://bearbull-qpng.onrender.com/changePassword",
         { oldPass: password.oldPass, newPass: password.newPass },
         { headers: headers }
       );

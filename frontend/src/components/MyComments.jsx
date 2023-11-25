@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import image from "../Images/hero.png";
 import axios from "axios";
 import "../style/Profile.css";
-require('dotenv').config()
+// require('dotenv').config()
 const MyComments = () => {
     const val = secureLocalStorage.getItem("user");
     const token = localStorage.getItem("authToken");
@@ -40,7 +40,7 @@ const MyComments = () => {
             "auth-token": token,
         };
         const res = await axios.get(
-            `${process.env.URL}/myComments` ,
+            "https://bearbull-qpng.onrender.com/myComments" ,
             { headers }
         );
         // console.log(res.data[0].comment);
@@ -67,7 +67,7 @@ const MyComments = () => {
             "auth-token": token,
         };
         const res = await axios.post(
-            `${process.env.URL}/editComments`,
+            "https://bearbull-qpng.onrender.com/editComments",
             { comment_id: e, new_comment: comment },
             { headers }
         );
@@ -90,7 +90,7 @@ const MyComments = () => {
             "auth-token": token,
         };
         const res = await axios.post(
-            `${process.env.URL}/dltComments`,
+            "https://bearbull-qpng.onrender.com/dltComments",
             { id: e },
             { headers }
         );
