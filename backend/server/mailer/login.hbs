@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Login Notification</title>
+  <style>
+    body {
+      font-family: Futura,Trebuchet MS,Arial,sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      background-color:rgb(172, 0, 172);
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .content {
+      padding: 7px;
+      font-size: 16px; 
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 4px 11px;
+      border-radius: 10px;
+      margin-top: 20px;
+      background-color: rgb(172, 0, 172);
+      text-color: whitesmoke;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: rgb(97, 20, 97);
+    }
+
+    .footer {
+      padding: 10px;
+      border-radius: 10px;
+      color: grey;
+      text-align: center;
+      /*margin-top: 15px;*/
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Account has been logged in!!</h1>
+    </div>
+
+    <div class="content">
+      <p>Greetings {{ demo.name }}!!!</p>
+
+      <p>Glad to see you! You have been currently logged in to your account</p>
+      <p>Below are the login activity details: </p>
+      <ul>
+        <li><strong>Date and Time:</strong> {{ demo.time }}</li>
+        <!-- Add more details as needed -->
+      </ul>
+
+      <p>If you have not logged into the account, please contact our support team immediately by clicking below! </p>
+      {{!-- {{ demo.support_email }} --}}
+
+      <p style="text-align: center;">
+        <a class="cta-button" href="#" style="color: whitesmoke">Support Contact</a>
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>Thank you for choosing our services!</p>
+      <p>Best regards,<br>Bear & Bull</p>
+    </div>
+  </div>
+</body>
+</html>
