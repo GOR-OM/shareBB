@@ -5,7 +5,8 @@ import { useState,useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify'
 import  secureLocalStorage  from  "react-secure-storage";
-
+const { configDotenv } = require('dotenv');
+require('dotenv').config()
 import axios from "axios";
 
 import React from "react";
@@ -40,7 +41,7 @@ const Login = () => {
       try
       {
         const res = await axios
-          .post("http://localhost:7000/login", {
+          .post(`${process.env.URL}/login`, {
 
             email: form.email,
             password: form.password
@@ -95,7 +96,7 @@ const Login = () => {
           <div className="logo">
             <img src={logo} className="logo-main" alt="" />
           </div>
-          <div className="text-medium  text-black">Sign In</div>
+          <div className="text-medium  text-black">Sign In asdfsdfg</div>
           <div className="text-small  text-black">
             Welcome back to the website
           </div>
