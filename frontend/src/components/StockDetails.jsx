@@ -1,4 +1,6 @@
 // StockDetails.js
+const { configDotenv } = require('dotenv');
+require('dotenv').config()
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
@@ -78,9 +80,9 @@ const StockDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:7000/getdata");
+        const res = await axios.get(`${process.env.URL}/getdata`);
         const res2 = await axios.get(
-          "http://localhost:7000/ml_data?company=tata",
+          `${process.env.URL}/ml_data?company=tata`,
           { headers }
         );
 

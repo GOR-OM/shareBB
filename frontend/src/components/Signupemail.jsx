@@ -1,4 +1,5 @@
 import "../style/Login.css";
+const { configDotenv } = require('dotenv');
 import hero from "../Images/hero.png";
 import logo from "../Images/loginLOGO.svg";
 import google from "../Images/google.png";
@@ -11,7 +12,7 @@ import axios from "axios";
 import { HStack } from "@chakra-ui/layout";
 import React from "react";
 import Timer from "./Timer";
-
+require('dotenv').config()
 const Signupemail = () => {
   const [form, setForm] = useState({
     email: "",
@@ -40,7 +41,7 @@ const Signupemail = () => {
       toast.error("Invalid Email");
     } else {
       try {
-        const res = await axios.post("http://localhost:7000/verifyEmail", {
+        const res = await axios.post(`${process.env.URL}/verifyEmail`, {
           email: form.email,
         });
         const data = res.status;
@@ -70,7 +71,7 @@ const Signupemail = () => {
     e.preventDefault()
     setShowTimer(true);
     try {
-        const res = await axios.post("http://localhost:7000/verifyEmail", {
+        const res = await axios.post(`${process.env.URL}/verifyEmail`, {
           email: form.email,
         });
         console.log("OTP Resent")
@@ -93,7 +94,7 @@ const Signupemail = () => {
         toast.error("OTP is required");
       } else {
         try {
-          const res = await axios.post("http://localhost:7000/otp_verification", {
+          const res = await axios.post(`${process.env.URL}/otp_verification`, {
             email: form.email,
             otp:form.otp
           });

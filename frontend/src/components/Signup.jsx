@@ -1,4 +1,5 @@
 import "../style/Login.css";
+const { configDotenv } = require('dotenv');
 import hero from "../Images/hero.png";
 import logo from "../Images/loginLOGO.svg";
 import google from "../Images/google.png";
@@ -8,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 
 import React from "react";
-
+require('dotenv').config()
 const Signup = (props) => {
   const email=localStorage.getItem('email')
   const [data, setData] = useState({
@@ -40,7 +41,7 @@ const Signup = (props) => {
       // console.log(data)
       try {
         const res = await axios
-          .post("http://localhost:7000/signup", {
+          .post(`${process.env.URL}/signup`, {
             name: data.name,
             username: data.username,
             email: data.email,

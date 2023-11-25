@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+const { configDotenv } = require('dotenv');
 import ErrorPage from './ErrorPage';
 import '../style/Wishlist.css';
 import Stock from './Stock';
 import { toast } from 'react-toastify';
 import Loader from './Loader';
-
+require('dotenv').config()
 const Wishlist = () => {
     const [share, setShare] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -18,7 +19,7 @@ const Wishlist = () => {
     };
     const handledelfav = async (e) => {
         try {
-            const res = await axios.post("http://localhost:7000/del-fav", {
+            const res = await axios.post(`${process.env.URL}/del-fav`, {
                 company: e,
             }, { headers });
             const data = res.status;
@@ -38,10 +39,10 @@ const Wishlist = () => {
     useEffect(() => {
         const getWishlistData = async () => {
             try {
-                const res = await axios.get('http://localhost:7000/getuser', { headers });
+                const res = await axios.get(`${process.env.URL}/getuser`, { headers });
                 console.log(res.data.favourites);
                 const favoriteCompanies = res.data.favourites;
-                const allCompaniesData = await axios.get('http://localhost:7000/getdata');
+                const allCompaniesData = await axios.get(`${process.env.URL}/getdata`);
                 const shareData = favoriteCompanies.map((companyName) => {
                     const filteredData = allCompaniesData.data.filter(item => item.Name === companyName);
                     return filteredData[0];
