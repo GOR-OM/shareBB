@@ -2,6 +2,7 @@
   "name": "homepg",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://sharebb-production.up.railway.app/",
   "start": "env-cmd -f .env.development react-scripts start",
   "dependencies": {
     "@chakra-ui/react": "^2.8.1",
