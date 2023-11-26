@@ -79,7 +79,7 @@ const StockDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://sharebb-production.up.railway.app//getdata");
+        const res = await axios.get("https://sharebb-production.up.railway.app/getdata");
         const res2 = await axios.get(
           "https://sharebb-production.up.railway.app/ml_data?company=tata",
           { headers }
