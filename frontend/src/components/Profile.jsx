@@ -31,7 +31,7 @@ const Profile = () => {
     try {
         console.log(user)
       const res = await axios.post(
-        "https://bearbull-qpng.onrender.com/editProfile",
+        "http://sharebb-production.up.railway.app/editProfile",
          user,
         { headers }
       );

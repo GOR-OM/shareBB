@@ -41,7 +41,7 @@ const Signup = (props) => {
       // console.log(data)
       try {
         const res = await axios
-          .post("https://bearbull-qpng.onrender.com/signup", {
+          .post("http://sharebb-production.up.railway.app/signup", {
             name: data.name,
             username: data.username,
             email: data.email,

@@ -19,7 +19,7 @@ const Wishlist = () => {
     };
     const handledelfav = async (e) => {
         try {
-            const res = await axios.post("https://bearbull-qpng.onrender.com/del-fav", {
+            const res = await axios.post("http://sharebb-production.up.railway.app/del-fav", {
                 company: e,
             }, { headers });
             const data = res.status;
@@ -39,10 +39,10 @@ const Wishlist = () => {
     useEffect(() => {
         const getWishlistData = async () => {
             try {
-                const res = await axios.get("https://bearbull-qpng.onrender.com/getuser", { headers });
+                const res = await axios.get("http://sharebb-production.up.railway.app/getuser", { headers });
                 console.log(res.data.favourites);
                 const favoriteCompanies = res.data.favourites;
-                const allCompaniesData = await axios.get("https://bearbull-qpng.onrender.com/getdata");
+                const allCompaniesData = await axios.get("http://sharebb-production.up.railway.app/getdata");
                 const shareData = favoriteCompanies.map((companyName) => {
                     const filteredData = allCompaniesData.data.filter(item => item.Name === companyName);
                     return filteredData[0];

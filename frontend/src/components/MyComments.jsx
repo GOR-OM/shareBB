@@ -40,7 +40,7 @@ const MyComments = () => {
             "auth-token": token,
         };
         const res = await axios.get(
-            "https://bearbull-qpng.onrender.com/myComments" ,
+            "http://sharebb-production.up.railway.app/myComments" ,
             { headers }
         );
         // console.log(res.data[0].comment);
@@ -67,7 +67,7 @@ const MyComments = () => {
             "auth-token": token,
         };
         const res = await axios.post(
-            "https://bearbull-qpng.onrender.com/editComments",
+            "http://sharebb-production.up.railway.app/editComments",
             { comment_id: e, new_comment: comment },
             { headers }
         );
@@ -90,7 +90,7 @@ const MyComments = () => {
             "auth-token": token,
         };
         const res = await axios.post(
-            "https://bearbull-qpng.onrender.com/dltComments",
+            "http://sharebb-production.up.railway.app/dltComments",
             { id: e },
             { headers }
         );

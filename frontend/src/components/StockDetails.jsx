@@ -80,9 +80,9 @@ const StockDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://bearbull-qpng.onrender.com/getdata");
+        const res = await axios.get("http://sharebb-production.up.railway.app/getdata");
         const res2 = await axios.get(
-          "https://bearbull-qpng.onrender.com/ml_data?company=tata",
+          "http://sharebb-production.up.railway.app/ml_data?company=tata",
           { headers }
         );
 

@@ -24,7 +24,7 @@ const Comments =  () => {
   const handleUser=async (e)=>{
     try{
     
-      const res = await axios.get("https://bearbull-qpng.onrender.com/getuser",{headers})
+      const res = await axios.get("http://sharebb-production.up.railway.app/getuser",{headers})
     console.log(res)
     const username = res.data.username
     
@@ -50,7 +50,7 @@ const Comments =  () => {
   
     try {
       const res = await axios.post(
-        "https://bearbull-qpng.onrender.com/addComments",
+        "http://sharebb-production.up.railway.app/addComments",
         { comment: comments, company: 'SBI', username: username },
         { headers: headers }
       );

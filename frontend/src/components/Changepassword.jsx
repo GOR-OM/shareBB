@@ -46,7 +46,7 @@ function Changepassword() {
       };
       console.log(headers);
       const res = await axios.post(
-        "https://bearbull-qpng.onrender.com/changePassword",
+        "http://sharebb-production.up.railway.app/changePassword",
         { oldPass: password.oldPass, newPass: password.newPass },
         { headers: headers }
       );

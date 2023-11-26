@@ -39,7 +39,7 @@ function Forgotpassword() {
         }
         else {
             const res = await axios
-                .post("https://bearbull-qpng.onrender.com/forgotPassword", {
+                .post("http://sharebb-production.up.railway.app/forgotPassword", {
                     email: form.email,
                 })
             toast.success('Otp sent')
@@ -52,7 +52,7 @@ function Forgotpassword() {
             toast.error("OTP is required");
         } else {
             try {
-                const res = await axios.post("https://bearbull-qpng.onrender.com/otp_verification", {
+                const res = await axios.post("http://sharebb-production.up.railway.app/otp_verification", {
                     email: form.email,
                     otp: form.otp
                 });
@@ -92,7 +92,7 @@ function Forgotpassword() {
         }
         else {
             try {
-                const res = await axios.post("https://bearbull-qpng.onrender.com/updatePassword", {
+                const res = await axios.post("http://sharebb-production.up.railway.app/updatePassword", {
                     email: form.email,
                     newPass: password.newPass
                 });

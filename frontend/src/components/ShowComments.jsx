@@ -15,7 +15,7 @@ const ShowComments = () => {
       "auth-token": token,
     };
     const res = await axios.post(
-      "https://bearbull-qpng.onrender.com/getComments",
+      "http://sharebb-production.up.railway.app/getComments",
       { company: "SBI" },
       { headers }
     );

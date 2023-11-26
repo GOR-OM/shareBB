@@ -17,7 +17,7 @@ const PriceAnalysis = () => {
 
   const handleaddfav = async (e) => {
     try {
-      const res = await axios.post('https://bearbull-qpng.onrender.com/add-fav', { company: e }, { headers });
+      const res = await axios.post('http://sharebb-production.up.railway.app/add-fav', { company: e }, { headers });
       const data = res.status;
       if (data === 200) {
         toast.success('Added to Favourites');
@@ -39,7 +39,7 @@ const PriceAnalysis = () => {
         if (storedData) {
           setShare(JSON.parse(storedData));
         } else {
-          const res = await axios.get('https://bearbull-qpng.onrender.com/getdata');
+          const res = await axios.get('http://sharebb-production.up.railway.app/getdata');
           const data = res.data;
           setShare(data);
           sessionStorage.setItem('priceAnalysisData', JSON.stringify(data));
