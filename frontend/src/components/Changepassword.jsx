@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import image from "../Images/hero.png";
 import axios from "axios";
 import "../style/Profile.css";
 import { ToastContainer, toast } from "react-toastify";
 import secureLocalStorage from "react-secure-storage";
 function Changepassword() {
+  const navigate = useNavigate();
   const location = useLocation();
   const val = secureLocalStorage.getItem("user");
   const [password, setPassword] = useState({
@@ -35,7 +36,11 @@ function Changepassword() {
       toast.error("Password of atmost 10 characters is required");
     } else if (password.newPass != password.confirmPass) {
       toast.error("New password and confirm password should be same");
-    } else {
+    } 
+    else  if (password?.newPass===password?.oldPass) {
+      toast.error("New password can not be same as old password");
+    }
+    else {
       delete password.confirmPass;
       const token = localStorage.getItem("authToken");
       console.log(token);
@@ -46,7 +51,7 @@ function Changepassword() {
       };
       console.log(headers);
       const res = await axios.post(
-        "http://sharebb-production.up.railway.app/changePassword",
+        "http://localhost:7000/changePassword",
         { oldPass: password.oldPass, newPass: password.newPass },
         { headers: headers }
       );
@@ -55,11 +60,13 @@ function Changepassword() {
       inputs.forEach((input) => (input.value = ""));
       if(res.status === 200){
       toast.success("Password changed sucessfully");
+      navigate('/Profile')
       }
       else if(res.status === 202){
         toast.error("Enter correct current password")
       }
     }
+    
   };
 
   useEffect(() => {
@@ -80,8 +87,8 @@ function Changepassword() {
 
   return (
     <div>
-      <div className="d-flex mx-4 flex-row justify-content-center mt-3 ">
-        <div className="d-flex flex-column w-25 " style={{ height: "100vh" }}>
+      <div className="page-container mx-4 mt-3 ">
+      <div className="Left d-flex flex-column ">
           <div className=" left d-flex flex-column align-items-center   h-75 w-100">
             <img className=" avatar mt-5 rounded-circle" src={image} />
             <div className="d-flex flex-column h-100 justify-content-around ">
@@ -89,23 +96,23 @@ function Changepassword() {
                 <div className="fs-2 fw-bold" style={{ color: "white" }}>
                   {val.username}
                 </div>
-                <div className="fs-5 mt-2" style={{ color: "white" }}>
+                <div
+                  className="fs-6 mt-2"
+                  style={{ color: "white", maxWidth: "300px" }}
+                >
                   {val.email}
                 </div>
-                <div className="fs-5" style={{ color: "white" }}>
+                <div className="fs-6" style={{ color: "white" }}>
                   {val.phone}
                 </div>
               </div>
-              <div style={{ color: "white" ,textAlign :"center" }}>
-                                Member since :{" "}
-                                <span className="fw-bold">{val.created_at.slice(0, 10)}</span>
-                            </div>
+              <div style={{ color: "white", textAlign: "center" }}>
+                Member since :{" "}
+                <span className="fw-bold">{val.created_at.slice(0, 10)}</span>
+              </div>
             </div>
           </div>
-          <div
-            className="d-flex flex-column h-25 align-items-center"
-            style={{}}
-          >
+          <div className="d-flex flex-column h-25 align-items-center">
             <Link
               className="active-link hoverClass  text-center p-3 fs-5 w-100"
               to="/Profile"
@@ -170,7 +177,7 @@ function Changepassword() {
                 onChange={handleChange}
               />
             </div>
-            <div className="col-md-6">
+            <div className="row-md-6">
               <button
                 type="submit"
                 className="btn btn-primary"
