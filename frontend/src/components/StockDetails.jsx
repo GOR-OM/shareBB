@@ -1,6 +1,4 @@
 // StockDetails.js
-// const { configDotenv } = require('dotenv');
-// require('dotenv').config()
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
@@ -47,6 +45,7 @@ const StockDetails = () => {
   const [futureData, setFutureData] = useState();
   const [boolPred,setBoolPred]= useState(true);
 
+  const Indian = ["Reliance Industries", "Infosys", "HDFC Bank", "Tata Consultancy Services"];
   const primaryXAxis = {
     valueType: "DateTime",
   };
@@ -80,9 +79,9 @@ const StockDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://sharebb-production.up.railway.app/getdata");
+        const res = await axios.get("http://localhost:7000/getdata");
         const res2 = await axios.get(
-          "http://sharebb-production.up.railway.app/ml_data?company=tata",
+          "http://localhost:7000/ml_data?company=tata",
           { headers }
         );
 
@@ -121,7 +120,7 @@ const StockDetails = () => {
               <h3 className="stock-title">{share.Name}</h3>
               <h6 className="stock-title">{share.Ticker}</h6>
               <div className="stock-info">
-                <h4 className="stock-price">${share.LastClose}</h4>
+                <h4 className="stock-price">{Indian.includes(share.Name)?'₹':'$'}{share.LastClose}</h4>
                 <span
                   className={`stock-change ${
                     share.LastChange > 0 ? "text-success" : "text-danger"
@@ -134,7 +133,7 @@ const StockDetails = () => {
             <div className="stock-data">
               <p className="stock-label">
                 Opening Price:{" "}
-                <span className="stock-value">{share.LastOpen}</span>
+                <span className="stock-value">{Indian.includes(share.Name)?'₹':'$'}{share.LastOpen}</span>
               </p>
               <p className="stock-label">
                 Circulating Supply:{" "}
@@ -143,7 +142,7 @@ const StockDetails = () => {
               <p className="stock-label">
                 Market Cap:{" "}
                 <span className="stock-value">
-                  ${(share.LastVolume * share.LastClose).toFixed(2)}
+                {Indian.includes(share.Name)?'₹':'$'}{(share.LastVolume * share.LastClose).toFixed(2)}
                 </span>
               </p>
             </div>
@@ -154,13 +153,13 @@ const StockDetails = () => {
               <div className="col-md-6">
                 <p className="stock-label">
                   Daily High:{" "}
-                  <span className="stock-value">${share.LastHigh}</span>
+                  <span className="stock-value">{Indian.includes(share.Name)?'₹':'$'}{share.LastHigh}</span>
                 </p>
               </div>
               <div className="col-md-6">
                 <p className="stock-label">
                   Daily Low:{" "}
-                  <span className="stock-value">${share.LastLow}</span>
+                  <span className="stock-value">{Indian.includes(share.Name)?'₹':'$'}{share.LastLow}</span>
                 </p>
               </div>
             </div>
