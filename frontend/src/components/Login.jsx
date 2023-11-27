@@ -138,6 +138,13 @@ const Login = () => {
               <p> &nbsp; Sign Up</p>
             </button>
           </div>
+          <div className="pt-3">
+            Go to
+            <span className="colorChange" style={{ cursor: 'pointer'}}  onClick={() => navigate("/")}>
+              {" "}
+              Home
+            </span>
+          </div>
 
           <div className="pt-4">
 
