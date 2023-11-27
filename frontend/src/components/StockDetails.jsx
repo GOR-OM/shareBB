@@ -49,8 +49,8 @@ const StockDetails = () => {
   const primaryXAxis = {
     valueType: "DateTime",
   };
-  const crosshair = { enable: true };
-  const tooltip = { enable: true };
+  const crosshair = { enable: true ,lineType:'Both'};
+  const tooltip = { enable: true};
   const periodselector = [
     { text: "1M", interval: 1, intervalType: "Months" },
     { text: "3M", interval: 3, intervalType: "Months" },
@@ -232,7 +232,8 @@ const StockDetails = () => {
             </small>
 
             <div className="container-fluid border-1 mt-4">
-              <StockChartComponent title=" Analysis">
+              <StockChartComponent title=" Analysis"
+              tooltip={{enable:true, format: '<b>${point.x} : ${point.y}</b>'}}>
                 <Inject services={[LineSeries, DateTime]} />
                 <StockChartSeriesCollectionDirective>
                   <StockChartSeriesDirective
