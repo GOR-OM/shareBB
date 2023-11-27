@@ -96,7 +96,7 @@ const Login = () => {
           <div className="logo">
             <img src={logo} className="logo-main" alt="" />
           </div>
-          <div className="text-medium  text-black">Sign In asdfsdfg</div>
+          <div className="text-medium  text-black">Sign In </div>
           <div className="text-small  text-black">
             Welcome back to the website
           </div>
@@ -138,7 +138,7 @@ const Login = () => {
               <p> &nbsp; Sign Up</p>
             </button>
           </div>
-          <div className="pt-3">
+          <div>
             Go to
             <span className="colorChange" style={{ cursor: 'pointer'}}  onClick={() => navigate("/")}>
               {" "}
@@ -146,7 +146,7 @@ const Login = () => {
             </span>
           </div>
 
-          <div className="pt-4">
+          <div>
 
             <button className="colorChange" onClick={() => navigate("/Forgotpassword")}>
               <p> &nbsp; Forgot Password?</p>
