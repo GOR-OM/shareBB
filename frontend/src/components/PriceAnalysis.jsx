@@ -4,9 +4,10 @@ import React, { useEffect, useState } from 'react';
 import Stock from './Stock';
 import Loader from './Loader';
 import { toast } from 'react-toastify';
-// require('dotenv').config()
+
 const PriceAnalysis = () => {
   const [share, setShare] = useState([]);
+  
   const [loading, setLoading] = useState(true);
   const token = localStorage.getItem('authToken');
 
@@ -15,9 +16,11 @@ const PriceAnalysis = () => {
     'auth-token': token,
   };
 
+
+  
   const handleaddfav = async (e) => {
     try {
-      const res = await axios.post('http://sharebb-production.up.railway.app/add-fav', { company: e }, { headers });
+      const res = await axios.post('https://sharebb-production.up.railway.app/add-fav', { company: e }, { headers });
       const data = res.status;
       if (data === 200) {
         toast.success('Added to Favourites');
@@ -35,15 +38,9 @@ const PriceAnalysis = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const storedData = sessionStorage.getItem('priceAnalysisData');
-        if (storedData) {
-          setShare(JSON.parse(storedData));
-        } else {
-          const res = await axios.get('http://sharebb-production.up.railway.app/getdata');
-          const data = res.data;
-          setShare(data);
-          sessionStorage.setItem('priceAnalysisData', JSON.stringify(data));
-        }
+        const res = await axios.get('https://sharebb-production.up.railway.app/getdata');
+        const data = res.data;
+        setShare(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -52,7 +49,7 @@ const PriceAnalysis = () => {
     };
 
     fetchData();
-  }, []); 
+  }, []); // Run only once when the component mounts
 
   return (
     <div>
@@ -62,7 +59,7 @@ const PriceAnalysis = () => {
         <div className='row m-2'>
           {share.map((item, index) => (
             <div key={index} className='col-lg-4 col-md-6 col-sm-12'>
-              <Stock
+              <Stock  
                 name={share[index].Name}
                 ticker={share[index].Ticker}
                 lastClose={share[index].LastClose}

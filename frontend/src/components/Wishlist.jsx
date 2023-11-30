@@ -18,7 +18,7 @@ const Wishlist = () => {
     };
     const handledelfav = async (e) => {
         try {
-            const res = await axios.post("http://sharebb-production.up.railway.app/del-fav", {
+            const res = await axios.post("https://sharebb-production.up.railway.app/del-fav", {
                 company: e,
             }, { headers });
             const data = res.status;
@@ -37,10 +37,10 @@ const Wishlist = () => {
     };
     const getWishlistData = async () => {
         try {
-            const res = await axios.get('http://sharebb-production.up.railway.app/getuser', { headers });
+            const res = await axios.get('https://sharebb-production.up.railway.app/getuser', { headers });
             console.log(res.data.favourites);
             const favoriteCompanies = res.data.favourites;
-            // const allCompaniesData = await axios.get('http://localhost:7000/getdata');
+            // const allCompaniesData = await axios.get('https://sharebb-production.up.railway.app/getdata');
             const storedData = sessionStorage.getItem('priceAnalysisData');
             if (storedData) {
                 setAllCompaniesData(JSON.parse(storedData));
@@ -48,7 +48,7 @@ const Wishlist = () => {
             }
             else {
                 // Fetch data from the server if not available in session storage
-                const res = await axios.get('http://sharebb-production.up.railway.app/getdata');
+                const res = await axios.get('https://sharebb-production.up.railway.app/getdata');
                 const data = res.data;
                 setAllCompaniesData(data);
                 // setShare(data);
@@ -88,8 +88,8 @@ const Wishlist = () => {
 
     return (
         <div className="wishlist-container">
-            <div className="wishlist-header">
-                <h2>Your Wishlist</h2>
+            <div className="wishlistHeader">
+                Your Wishlist
             </div>
             <div className="row m-5">
                 {share && share.map((item, index) => (
@@ -97,7 +97,8 @@ const Wishlist = () => {
                         <div key={index} className='col-lg-4 col-md-6 col-sm-12'>
                             <Stock
                                 key={index}
-                                name={item.Ticker}
+                                name={item.Name}
+                                ticker={item.Ticker}
                                 lastClose={item.LastClose}
                                 lastChange={item.LastChange}
                                 handleDelFav={() => handledelfav(item.Name)}

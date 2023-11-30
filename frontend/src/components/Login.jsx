@@ -1,12 +1,11 @@
 import "../style/Login.css";
 import hero from "../Images/hero.png";
 import logo from "../Images/loginLOGO.svg";
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify'
-import  secureLocalStorage  from  "react-secure-storage";
-// const { configDotenv } = require('dotenv');
-// require('dotenv').config()
+import secureLocalStorage from "react-secure-storage";
+
 import axios from "axios";
 
 import React from "react";
@@ -38,8 +37,7 @@ const Login = () => {
     }
 
     else {
-      try
-      {
+      try {
         const res = await axios
           .post("https://sharebb-production.up.railway.app/login", {
 
@@ -48,10 +46,10 @@ const Login = () => {
           })
         const token = res.data.token;
         // console.log(res.data);
-        secureLocalStorage.setItem('user',res.data)
-        
-        
-        
+        secureLocalStorage.setItem('user', res.data)
+
+
+
         if (token) {
           toast.success("You have logged in successfully")
           localStorage.setItem('authToken', token)
@@ -65,12 +63,12 @@ const Login = () => {
           toast.error("Email or password incorrect ")
         }
       }
-      catch (err){
-          toast.error("Email ID not registered")
-          console.log(err.response.status);
-          console.log(err.message);
-          console.log(err.response.headers); // 👉️ {... response headers here}
-          console.log(err.response.data); // 👉️ {... response data here}
+      catch (err) {
+        toast.error("Email ID not registered")
+        console.log(err.response.status);
+        console.log(err.message);
+        console.log(err.response.headers); // 👉️ {... response headers here}
+        console.log(err.response.data); // 👉️ {... response data here}
       }
     }
 
@@ -96,7 +94,7 @@ const Login = () => {
           <div className="logo">
             <img src={logo} className="logo-main" alt="" />
           </div>
-          <div className="text-medium  text-black">Sign In </div>
+          <div className="text-medium  text-black">Sign In</div>
           <div className="text-small  text-black">
             Welcome back to the website
           </div>
@@ -125,33 +123,35 @@ const Login = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-5">
               <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
                 Sign In
               </button>
             </div>
 
           </form>
-          <div className="pt-3">
-            Don't have an account?
-            <button className="colorChange" onClick={() => navigate("/signupwithemail")}>
-              <p> &nbsp; Sign Up</p>
-            </button>
-          </div>
-          <div>
-            Go to
-            <span className="colorChange" style={{ cursor: 'pointer'}}  onClick={() => navigate("/")}>
-              {" "}
-              Home
-            </span>
-          </div>
 
           <div>
-
-            <button className="colorChange" onClick={() => navigate("/Forgotpassword")}>
-              <p> &nbsp; Forgot Password?</p>
-            </button>
+            <div className="mt-3">
+              Don't have an account?
+              <button className="colorChange" onClick={() => navigate("/signupwithemail")}>
+                <span> &nbsp; Sign Up</span>
+              </button>
+            </div>
+            <div className="mt-2">
+              Go to
+             <span className="colorChange" style={{ cursor: 'pointer' }} onClick={() => navigate("/")}>
+               {" "}
+                Home
+             </span>
+            </div>
+            <div className="mt-2">
+              <button className="colorChange" onClick={() => navigate("/Forgotpassword")}>
+                <span>  Forgot Password?</span>
+              </button>
+            </div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -159,3 +159,4 @@ const Login = () => {
 };
 
 export default Login;
+

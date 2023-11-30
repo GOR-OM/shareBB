@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-// const { configDotenv } = require('dotenv');
 import "../style/showComments.css";
+import { useParams } from "react-router-dom";
 import axios from "axios";
-// require('dotenv').config()
 const ShowComments = () => {
   const token = localStorage.getItem("authToken");
   // console.log(token)
+  const params = useParams();
   const [data, setData] = useState([]);
   const getData = async (e) => {
     // e.preventDefault();
@@ -15,8 +15,8 @@ const ShowComments = () => {
       "auth-token": token,
     };
     const res = await axios.post(
-      "http://sharebb-production.up.railway.app/getComments",
-      { company: "SBI" },
+      "https://sharebb-production.up.railway.app/getComments",
+      { company: `${params.id}` },
       { headers }
     );
     // console.log(res.data[0].comment);

@@ -1,18 +1,15 @@
 import "../style/Login.css";
-// const { configDotenv } = require('dotenv');
+import "../style/App.css";
 import hero from "../Images/hero.png";
 import logo from "../Images/loginLOGO.svg";
-import google from "../Images/google.png";
-import { useState,useContext } from "react";
+import React,{ useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import Signup from "./Signup";
-//import {FcGoogle} from 'react-icons/fc';
 import axios from "axios";
 import { HStack } from "@chakra-ui/layout";
-import React from "react";
 import Timer from "./Timer";
-// require('dotenv').config()
+
 const Signupemail = () => {
   const [form, setForm] = useState({
     email: "",
@@ -22,13 +19,9 @@ const Signupemail = () => {
   const [showTimer, setShowTimer] = useState(false);
   const [showResend, setResend] = useState(false);
 
-
-
-
   const handleTimerComplete = () => {
     setShowTimer(false);
     setResend(true);
-    
   };
 
   const navigate = useNavigate();
@@ -41,49 +34,48 @@ const Signupemail = () => {
       toast.error("Invalid Email");
     } else {
       try {
-        const res = await axios.post("http://sharebb-production.up.railway.app/verifyEmail", {
-          email: form.email,
-        });
+        const res = await axios.post(
+          "https://sharebb-production.up.railway.app/verifyEmail",
+          {
+            email: form.email,
+          }
+        );
         const data = res.status;
         if (data === 200) {
           const changeClass1 = document.querySelector(".send");
-          const changeClass2 = document.querySelector(".verify"); 
+          const changeClass2 = document.querySelector(".verify");
           changeClass1.classList.add("d-none");
           changeClass2.classList.remove("d-none");
+          toast.success("OTP sent")
         }
         else if( data === 222 ){
           toast.error("Email already registered. Please Login.")
         }
       } catch (err) {
         if (err.response) {
-          // ✅ log status code here
-          console.log(err.response.status);
-          console.log(err.message);
-          console.log(err.response.headers); // 👉️ {... response headers here}
-          console.log(err.response.data); // 👉️ {... response data here}
+          toast.error("Something went wrong");
         }
       }
-
-      
     }
   };
-  const handleResubmit = async(e)=>{
-    e.preventDefault()
+  const handleResubmit = async (e) => {
+    e.preventDefault();
     setShowTimer(true);
+    setResend(false);
     try {
-        const res = await axios.post("http://sharebb-production.up.railway.app/verifyEmail", {
+      const res = await axios.post(
+        "https://sharebb-production.up.railway.app/verifyEmail",
+        {
           email: form.email,
         });
-        console.log("OTP Resent")
+        toast.success("OTP resent");
+        
 
   }
   catch (err) {
     if (err.response) {
-      // ✅ log status code here
-      console.log(err.response.status);
-      console.log(err.message);
-      console.log(err.response.headers); // 👉️ {... response headers here}
-      console.log(err.response.data); // 👉️ {... response data here}
+      console.log("Something went wrong");
+      
     }
   }
 }
@@ -91,34 +83,29 @@ const Signupemail = () => {
 
     e.preventDefault();
     if (!form.otp) {
-        toast.error("OTP is required");
-      } else {
-        try {
-          const res = await axios.post("http://sharebb-production.up.railway.app/otp_verification", {
+      toast.error("OTP is required");
+    } else {
+      try {
+        const res = await axios.post(
+          "https://sharebb-production.up.railway.app/otp_verification",
+          {
             email: form.email,
-            otp:form.otp
-          });
-          const data = res.status;
-          if(data===200){
-            localStorage.setItem('email',form.email)
-            navigate('/signup')
+            otp: form.otp,
           }
-          else if(data===288){
-            toast.error("Incorrect OTP. Please enter again.")
-          }
-        } catch (err) {
-          if (err.response) {
-            // ✅ log status code here
-            console.log(err.response.status);
-            console.log(err.message);
-            console.log(err.response.headers); // 👉️ {... response headers here}
-            console.log(err.response.data); // 👉️ {... response data here}
-          }
+        );
+        const data = res.status;
+        if (data === 200) {
+          localStorage.setItem("email", form.email);
+          navigate("/signup");
+        } else if (data === 288) {
+          toast.error("Incorrect OTP. Please enter again.");
         }
-  
-        
+      } catch (err) {
+        if (err.response) {
+          console.log("Something went wrong");
+        }
       }
-
+    }
   };
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -126,10 +113,10 @@ const Signupemail = () => {
   };
 
   const backToSignup = () => {
-    navigate('/signupwithemail')
-  }
+    navigate("/signupwithemail");
+  };
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleVerifyOTP(e);
     }
   };
@@ -194,11 +181,11 @@ const Signupemail = () => {
                   onKeyPress={handleKeyPress} 
                 />
               </div>
-              <div className="col-md-6 mt-3">
+              <div className="col-12 mt-3">
                 <HStack>
                 <button
                   type="submit"
-                  className="btn btn-primary"
+                  className="btn btn-primary sizing"
                   onClick={handleVerifyOTP}
                 >
                   Verify OTP
@@ -211,9 +198,9 @@ const Signupemail = () => {
                 >
                   Back
                 </button>
-                {showTimer && <Timer onComplete={handleTimerComplete} />}
 
                 </HStack>
+                {showTimer && <Timer  onComplete={handleTimerComplete} />}
 
                 
               </div>
@@ -227,20 +214,27 @@ const Signupemail = () => {
           </div>
             </div>
           </form>
-          <div className="pt-3">
-            Already have account?
-            <span className="colorChange" style={{ cursor: 'pointer'}}  onClick={() => navigate("/login")}>
-              {" "}
-              Log in
-            </span>
+
+          <div className="extras">
+            <div className="mt-3">
+              Already have account?
+              <span className="colorChange" style={{ cursor: 'pointer'}}  onClick={() => navigate("/login")}>
+                {" "}
+                Log in
+              </span>
+            </div>
+            <div className="mt-2">
+              Go to
+              <span className="colorChange" style={{ cursor: 'pointer'}}  onClick={() => navigate("/")}>
+                {" "}
+                Home
+              </span>
+            </div>
+            <div>
+
+            </div>
           </div>
-          <div className="pt-3">
-            Go to
-            <span className="colorChange" style={{ cursor: 'pointer'}}  onClick={() => navigate("/")}>
-              {" "}
-              Home
-            </span>
-          </div>
+          
         </div>
       </div>
     </div>

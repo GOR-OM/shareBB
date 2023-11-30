@@ -50,7 +50,7 @@ const AboutUs = () => {
       ],
     },
     {
-      name: 'Dhairya Bhanvadia',
+      name: 'Dhairya Bhanvadiya',
       username: 'Dhairya',
       studentID: '202101436',
       imageSrc: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(30).jpg',
