@@ -85,7 +85,7 @@ function Nav() {
                                 <Link
                                     className='nav-link'
                                     onClick={handleUnderline}
-                                    to='/Wishlist'
+                                    to='/wishlist'
                                 >
                                     Wishlist
                                 </Link>
