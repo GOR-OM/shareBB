@@ -73,11 +73,8 @@ function App() {
                   </ShowNavbar>
                   <Routes>
                     <Route path='/' element={<NewHome />} />
-                    <Route path='/newhome' element={<NewHome />} />
-                    
                     <Route path='/news' element={<TempNewNews />} />
-                    <Route path='/:companyName' element={<CompanyNewsPage />} />
-                   
+                    <Route path='/news/:companyName' element={<CompanyNewsPage />} />
                     <Route path='/wishlist' element={<Wishlist />} />
                     <Route path='/aboutus' element={<AboutUs />} />
                     <Route path='/login' element={<Login />} />
@@ -93,7 +90,7 @@ function App() {
                     <Route path='/mycomments' element={<MyComments />} />
                     <Route path='/faqs' element={<FAQs />} />
                     <Route path='*' element={<Error404 />} />
-                    {/* <Route path='/priceanalysis' element={<PriceAnalysis />} /> */}
+                    
                     
 
               </Routes>

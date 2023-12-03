@@ -65,7 +65,7 @@ function DrawerExample() {
                         />
                         <VStack p={'2'}>
                             {filteredCompanies.map((company, index) => (
-                                <Link key={index} to={`/${company.toLowerCase()}`}>
+                                <Link key={index} to={`/news/${company.toLowerCase()}`}>
                                     <Button
                                         w="full"
                                         color="white" // Text color
