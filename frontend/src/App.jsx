@@ -51,8 +51,8 @@ function App() {
   const checkAndClearLocalStorage = () => {
     const currentTime = new Date().getTime();
     const storedTime = localStorage.getItem('storageInitializedTime');
-    console.log(currentTime);
-    console.log(storedTime);
+    // console.log(currentTime);
+    // console.log(storedTime);
     if (storedTime && currentTime - parseInt(storedTime, 10) > 3600*1000) {
       // Clear localStorage if more than an hour has passed
       clearLocalStorage();
@@ -60,7 +60,7 @@ function App() {
   };
   const [token, setToken] = useState(isAuthenticated())
   setInterval(() => { setToken(isAuthenticated()) }, 1000);
-  setInterval(() => { checkAndClearLocalStorage() }, 5000);
+  setInterval(() => { checkAndClearLocalStorage() }, 1000);
   return (
     <>
 

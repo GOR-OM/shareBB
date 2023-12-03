@@ -105,6 +105,9 @@ const Stock = (prop) => {
     "Infosys",
     "HDFC Bank",
     "Tata Consultancy Services",
+    "MRF",
+    "BRITANNIA",
+    "PARLE INDUSTRIES LIMITED"
   ];
 
   return (
