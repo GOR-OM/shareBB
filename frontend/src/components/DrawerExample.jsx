@@ -20,8 +20,8 @@ function DrawerExample() {
 
     // List of companies
     const companies = [
-        'Tesla', 'Apple', 'Amazon', 'Google', 'Netflix', 'Cnbc', 'HDFC', 'Reliance', 'Reliance Global',
-        'ICICI Bank', 'Infosys', 'Wipro', 'Make My Trip', 'Yatra', 'Sify Tech', 'Freshworks'
+        'Tesla', 'Apple', 'Amazon', 'Google', 'Netflix', 'Cnbc', 'HDFC', 'Reliance', 'RelianceGlobal',
+        'ICICIBank', 'Infosys', 'Wipro', 'MakeMyTrip', 'Yatra', 'SifyTech', 'Freshworks'
     ];
 
     // Filtered companies based on search value
