@@ -22,6 +22,9 @@ const StockDetails = () => {
     "Infosys",
     "HDFC Bank",
     "Tata Consultancy Services",
+    "MRF",
+    "BRITANNIA",
+    "PARLE INDUSTRIES LIMITED"
   ];
   const token = localStorage.getItem("authToken");
   const headers = {
