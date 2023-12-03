@@ -1,20 +1,20 @@
 /*======================
-    404 page
+    401 page
 =======================*/
 
 
-.page_404 {
+.page_401 {
     background: #fff;
     height: 100vh;
     width: 100vw;
     font-family: 'Arvo', serif;
 }
 
-.page_404 img {
+.page_401 img {
     width: 100%;
 }
 
-.four_zero_four_bg {
+.four_zero_one_bg {
 
     background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
     height: 400px;
@@ -22,15 +22,15 @@
 }
 
 
-.four_zero_four_bg h1 {
+.four_zero_one_bg h1 {
     font-size: 3rem;
 }
 
-.four_zero_four_bg h3 {
+.four_zero_one_bg h3 {
     font-size: 2rem;
 }
 
-.link_404 {
+.link_401 {
     color: #fff !important;
     padding: 10px 20px;
     background: purple;

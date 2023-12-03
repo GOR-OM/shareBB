@@ -109,7 +109,7 @@ function App() {
                   </ShowNavbar>
                   <Routes>
                     <Route path='/' element={<NewHome />} />
-                    <Route path='/tempnews' element={<TempNewNews />} />
+                    <Route path='/news' element={<TempNewNews />} />
                     <Route path='/aboutus' element={<AboutUs />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/signup' element={<Signup />} />
@@ -126,7 +126,7 @@ function App() {
                     <Route path='/faqs' element={<FAQs />} />
                     {/* <Route path='/Profile' element={<Profile />} /> */}
                     {/* <Route path='/news' element={<News />} /> */}
-                    <Route path='*' element={<Error401 />} />
+                    <Route path='*' element={<Error404 />} />
 
               </Routes>
               <ShowFooter>
