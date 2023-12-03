@@ -20,8 +20,8 @@ function DrawerExample() {
 
     // List of companies
     const companies = [
-        'Tesla', 'Apple', 'Amazon', 'Google', 'Netflix', 'Cnbc', 'HDFC', 'Reliance', 'Reliance Global',
-        'ICICI Bank', 'Infosys', 'Wipro', 'Make My Trip', 'Yatra', 'Sify Tech', 'Freshworks'
+        'Tesla', 'Apple', 'Amazon', 'Google', 'Netflix', 'Cnbc', 'HDFC', 'Reliance', 'RelianceGlobal',
+        'ICICIBank', 'Infosys', 'Wipro', 'MakeMyTrip', 'Yatra', 'SifyTech', 'Freshworks'
     ];
 
     // Filtered companies based on search value
@@ -65,7 +65,7 @@ function DrawerExample() {
                         />
                         <VStack p={'2'}>
                             {filteredCompanies.map((company, index) => (
-                                <Link key={index} to={`/${company.toLowerCase()}`}>
+                                <Link key={index} to={`/news/${company.toLowerCase()}`}>
                                     <Button
                                         w="full"
                                         color="white" // Text color
