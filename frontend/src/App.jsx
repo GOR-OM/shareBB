@@ -46,20 +46,22 @@ function App() {
   //     // window.removeEventListener('beforeunload', clearLocalStorage);
   //   };
   // }, []);
-  const token1 = localStorage.getItem('authToken');
-  const headers = {
-    'Content-Type': 'application/json',
-    'auth-token': token1,
-  };
   const clearLocalStorage = () => {
     localStorage.clear();
   };
   const getuser = async () => {
+    if(isAuthenticated()){
+      const token1 = localStorage.getItem('authToken');
+      const headers = {
+        'Content-Type': 'application/json',
+        'auth-token': token1,
+      };
     const res = await axios.get('https://sharebb-production.up.railway.app/getuser', {
         headers,
       });
       const favoriteCompanies = res.data.favourites;
       localStorage.setItem('favoriteCompanies', JSON.stringify(favoriteCompanies));
+    }
   }
   const checkAndClearLocalStorage = () => {
     const currentTime = new Date().getTime();
@@ -74,7 +76,7 @@ function App() {
   const [token, setToken] = useState(isAuthenticated())
   setInterval(() => { setToken(isAuthenticated()) }, 1000);
   setInterval(() => { checkAndClearLocalStorage() }, 1000);
-  setInterval(() => { getuser() }, 100);
+  setInterval(() => { getuser() }, 1000);
   return (
     <>
 

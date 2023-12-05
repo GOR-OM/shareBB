@@ -51,7 +51,7 @@ const Wishlist = () => {
       //   headers,
       // });
       const favoriteCompanies = JSON.parse(localStorage.getItem('favoriteCompanies'));
-      console.log(favoriteCompanies);
+      // console.log(favoriteCompanies);
 
       const storedData = sessionStorage.getItem('priceAnalysisData');
       if (storedData) {
