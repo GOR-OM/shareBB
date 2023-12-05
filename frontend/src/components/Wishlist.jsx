@@ -47,13 +47,11 @@ const Wishlist = () => {
 
   const getWishlistData = async () => {
     try {
-      const res = await axios.get('https://sharebb-production.up.railway.app/getuser', {
-        headers,
-      });
-      if (res.status === 401) {
-        Navigate('*');
-      }
-      const favoriteCompanies = res.data.favourites;
+      // const res = await axios.get('https://sharebb-production.up.railway.app/getuser', {
+      //   headers,
+      // });
+      const favoriteCompanies = JSON.parse(localStorage.getItem('favoriteCompanies'));
+      console.log(favoriteCompanies);
 
       const storedData = sessionStorage.getItem('priceAnalysisData');
       if (storedData) {
@@ -64,8 +62,7 @@ const Wishlist = () => {
         setAllCompaniesData(data);
         sessionStorage.setItem('priceAnalysisData', JSON.stringify(data));
       }
-
-      const shareData = favoriteCompanies.map((companyName) => {
+      const shareData = favoriteCompanies?.map((companyName) => {
         const filteredData = allCompaniesData.filter((item) => item.Name === companyName);
         return filteredData[0];
       });
