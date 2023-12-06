@@ -22,17 +22,27 @@ const PriceAnalysis = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const res = await axios.get('https://sharebb-production.up.railway.app/getdata');
-        const data = res.data;
-        setShare(data);
-        setFilteredShares(data); // Initialize filteredShares with all shares
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
+        try {
+          // Check if data is in sessionStorage
+          const cachedData = sessionStorage.getItem('shareData');
+          if (cachedData) {
+            setShare(JSON.parse(cachedData));
+          } else {
+            // Fetch data from the backend
+            const res = await axios.get('https://sharebb-production.up.railway.app/getdata', {
+              headers: headers,
+            });
+            const data = res.data;
+            setShare(data);
+            // Store data in sessionStorage
+            sessionStorage.setItem('shareData', JSON.stringify(data));
+          }
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        } finally {
+          setLoading(false);
+        }
+      };
 
     fetchData();
   }, []); // Run only once when the component mounts
