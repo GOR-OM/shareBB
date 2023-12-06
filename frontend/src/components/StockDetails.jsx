@@ -22,6 +22,9 @@ const StockDetails = () => {
     "Infosys",
     "HDFC Bank",
     "Tata Consultancy Services",
+    "MRF",
+    "BRITANNIA",
+    "PARLE INDUSTRIES LIMITED"
   ];
   const token = localStorage.getItem("authToken");
   const headers = {
@@ -155,7 +158,7 @@ const StockDetails = () => {
               Past Analysis - {share.Name}
             </h1>
             <small className="text-muted stock-last-updated">
-              Last Updated On: {new Date(Date.now()).toLocaleString()}
+              Last Updated On: 5/12/2023 14:00:00
             </small>
 
             <div className="container-fluid border-1 mt-4">

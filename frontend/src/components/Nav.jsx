@@ -105,7 +105,7 @@ function Nav() {
                             <Link
                                 className='nav-link'
                                 onClick={handleUnderline}
-                                to='/Wishlist'
+                                to='/wishlist'
                                 style={{ borderBottomWidth: isNavOpen ? 0 : 2, borderBottomWidth: underlineWidth }}
                             >
                                 Wishlist

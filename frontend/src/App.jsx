@@ -27,6 +27,7 @@ import StockDetails from './components/StockDetails.jsx'
 import Stock from './components/Stock.jsx';
 import NewHome from './components/NewHome.jsx';
 import FAQs from './components/FAQs.jsx';
+import axios from 'axios';
 function App() {
   const isAuthenticated = () => {
     const authToken = localStorage.getItem('authToken');
@@ -48,11 +49,25 @@ function App() {
   const clearLocalStorage = () => {
     localStorage.clear();
   };
+  const getuser = async () => {
+    if(isAuthenticated()){
+      const token1 = localStorage.getItem('authToken');
+      const headers = {
+        'Content-Type': 'application/json',
+        'auth-token': token1,
+      };
+    const res = await axios.get('https://sharebb-production.up.railway.app/getuser', {
+        headers,
+      });
+      const favoriteCompanies = res.data.favourites;
+      localStorage.setItem('favoriteCompanies', JSON.stringify(favoriteCompanies));
+    }
+  }
   const checkAndClearLocalStorage = () => {
     const currentTime = new Date().getTime();
     const storedTime = localStorage.getItem('storageInitializedTime');
-    console.log(currentTime);
-    console.log(storedTime);
+    // console.log(currentTime);
+    // console.log(storedTime);
     if (storedTime && currentTime - parseInt(storedTime, 10) > 3600*1000) {
       // Clear localStorage if more than an hour has passed
       clearLocalStorage();
@@ -60,7 +75,8 @@ function App() {
   };
   const [token, setToken] = useState(isAuthenticated())
   setInterval(() => { setToken(isAuthenticated()) }, 1000);
-  setInterval(() => { checkAndClearLocalStorage() }, 5000);
+  setInterval(() => { checkAndClearLocalStorage() }, 1000);
+  setInterval(() => { getuser() }, 1000);
   return (
     <>
 

@@ -73,9 +73,11 @@ const Stock = (prop) => {
 
   const getWishlistData = async () => {
     try {
-      const res = await axios.get('https://sharebb-production.up.railway.app/getuser', { headers });
-      console.log(res.data.favourites);
-      setFavoriteCompanies(res.data.favourites);
+      // const res = await axios.get('https://sharebb-production.up.railway.app/getuser', { headers });
+      // console.log(res.data.favourites);
+      const favoriteCompanies = JSON.parse(localStorage.getItem('favoriteCompanies'));
+      // console.log(favoriteCompanies);
+      setFavoriteCompanies(favoriteCompanies);
     } catch (error) {
       console.error('Error fetching wishlist data', error);
       setError(true);
@@ -105,6 +107,9 @@ const Stock = (prop) => {
     "Infosys",
     "HDFC Bank",
     "Tata Consultancy Services",
+    "MRF",
+    "BRITANNIA",
+    "PARLE INDUSTRIES LIMITED"
   ];
 
   return (
