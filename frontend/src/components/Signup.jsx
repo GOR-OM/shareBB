@@ -50,9 +50,6 @@ const Signup = (props) => {
     } else if (data?.password.length < 8) {
       toast.error('Password of atleast 8 characters is required')
     }
-    else if (data?.password.length > 16) {
-      toast.error('Password of atmost 16 characters is required')
-    }
     else if (!regex.test(data?.password)) {
       toast.error("Password doesn't match the requirements");
     } else {

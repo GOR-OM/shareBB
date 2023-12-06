@@ -136,9 +136,7 @@ function Forgotpassword() {
       toast.error("Confirm Password  is required");
     } else if (password?.newPass.length < 8) {
       toast.error("New Password  of atleast 8 characters is required");
-    } else if (password?.newPass.length > 16) {
-      toast.error("New Password  of atmost 16 characters is required");
-    } else if (password.newPass !== password.confirmPass) {
+    }  else if (password.newPass !== password.confirmPass) {
       toast.error("New password and confirm password should be same");
     } else if (!pass.test(password?.newPass)) {
       toast.error("Password doesn't match the requirements");
