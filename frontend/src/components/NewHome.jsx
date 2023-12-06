@@ -18,7 +18,8 @@ const NewHome = () => {
 
             <div>
                 <h1 className='home-h1'>A quick guide to our product</h1>
-                <img src={Tour} className="home-guide-image rounded mx-auto d-block" alt="" />
+                <a href="https://www.youtube.com/watch?v=Z-kGjVJtEMo" aria-pressed="true">
+                <img src={Tour} className="home-guide-image rounded mx-auto d-block" alt="" /></a>
             </div>
     <div className='mt-3'>
       {/* Navbar (Assuming you already have one) */}
