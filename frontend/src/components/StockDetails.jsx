@@ -24,7 +24,12 @@ const StockDetails = () => {
     "Tata Consultancy Services",
     "MRF",
     "BRITANNIA",
-    "PARLE INDUSTRIES LIMITED"
+    'SBI Bank',
+    'Hero Motocorp',
+    'Bharti Airtel',
+    'Axis Bank',
+    'Asian Paints Limited',
+    'Adani Enterprises'
   ];
   const token = localStorage.getItem("authToken");
   const headers = {

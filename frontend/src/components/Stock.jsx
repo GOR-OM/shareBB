@@ -109,7 +109,12 @@ const Stock = (prop) => {
     "Tata Consultancy Services",
     "MRF",
     "BRITANNIA",
-    "PARLE INDUSTRIES LIMITED"
+    'SBI Bank',
+    'Hero Motocorp',
+    'Bharti Airtel',
+    'Axis Bank',
+    'Asian Paints Limited',
+    'Adani Enterprises'
   ];
 
   return (
