@@ -1,175 +1,130 @@
 {
     "stories": [
         {
-            "id": "8935452191057792231",
-            "title": "Black Friday AirPods deals: Apple earbuds are down to all-time low prices",
-            "url": "https://www.businessinsider.com/guides/deals/apple-airpods-pro-airpods-second-gen-black-friday-deal-2023-11",
-            "site": "businessinsider.com",
-            "time": 1700506552000,
-            "favicon_url": "https://static.tickertick.com/website_icons/businessinsider.com.ico",
+            "id": "-6862446326601465611",
+            "title": "WhatsApp Update Allows Sending Photos and Videos in Original Quality",
+            "url": "https://www.gizchina.com/2023/12/06/whatsapp-ios-media-sharing-update/",
+            "site": "gizchina.com",
+            "time": 1701855818000,
+            "favicon_url": "https://static.tickertick.com/website_icons/gizchina.com.ico",
             "tags": [
                 "aapl"
             ],
-            "description": "You don't have to wait until Black Friday to score savings — right now AirPods and AirPods Pro are down to excellent lows prices. When you buy through our links, Insider may earn an affiliate commission. Learn moreApple AirPods are on sale now ahead of Black Friday.AmazonApple AirPods and AirPods Pro are among the top wireless earbuds you can buy, and for good reason. Their sleek design, great audio quality, and smooth connectivity with iPhones set them apart from the competition. But while they usually come with a high price tag, you can find both models on sale right now as part of an early Black Friday AirPods deal. Back down to their all-time lowest price, the AirPods Pro (second-gen) with USB-C charging are a steal at $60 off from Amazon. The AirPods Pro deliver the best sound quality of any Apple earbuds and they feature active noise cancelation (ANC) to block out background sounds. But if you don't mind losing ANC, you can get the standard AirPods (second-gen) for even less money at just $79 — which is only $10 more than the lowest they've ever dropped to. You can learn more about both models in our AirPods Pro review and AirPods 2 review. Now, it's not uncommon to find AirPods on sale throughout the year — in fact, we highly advise against ever paying full price for a pair. However, these Black Friday AirPods deals feature especially big price drops that we only see during limited-time sales like this. You can find even more top discounts on other products in our guide to the best Black Friday deals. And if you're looking for more to add to your Amazon cart, check out our guide to the best Amazon Black Friday deals too.Which AirPods should I buy?If you're torn between which AirPods to buy, know that each is designed with a different user in mind. The second-generation AirPods Pro offer an excellent balance of performance, price, and comfort for most people, and they include premium features like active noise cancelation, adaptive sound, spatial audio, and water/sweat resistance. These perks help make them our overall pick for the best AirPods you can buy.However, for the more budget-minded, the standard second-generation AirPods are still worthwhile. They deliver the same effortless connectivity with iPhones and offer solid sound quality. However, in exchange for their lower price, they're missing ANC, water resistance, and spatial audio support. Apple also sells a midrange AirPods model, the AirPods (third-gen), which typically cost about $40 more than the second-gen model. The third-gen AirPods add water resistance and spatial audio but are still missing ANC. You can learn more about them in our third-gen AirPods review.Finally, buyers who prefer an over-ear headphone design instead of earbuds, should consider the AirPods Max. These high-end headphones deliver premium sound quality, comfort, and battery life. Check out our AirPods Max review for more details. Read the original article on Business Insider",
+            "description": "Sharing photos and videos on WhatsApp via iOS has often led to a disappointing reduction in quality. Despite the impressive capabilities of iPhone cameras, media ... The post WhatsApp Update Allows Sending Photos and Videos in Original Quality appeared first on Gizchina.com.",
             "tickers": [
                 "aapl"
             ],
-            "img" : "https://i.insider.com/655bd79c4ca513d8242c95b3?width=1000&format=jpeg&auto=webp"
+            "img" : "data:image/jpeg;base64,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"
         },
         {
-            "id": "9140217599421873249",
-            "title": "Canadian Smartphone Sales Dip Again, Apple Still Leads Marketshare",
-            "url": "https://www.iphoneincanada.ca/2023/11/20/canadian-smartphone-sales-dip-again-apple-still-leads-marketshare/",
-            "site": "iphoneincanada.ca",
-            "time": 1700505106000,
-            "favicon_url": "https://static.tickertick.com/website_icons/iphoneincanada.ca.ico",
+            "id": "-2988314731416555668",
+            "title": "Will the iPhone model in the EXIF data always be correct?",
+            "url": "https://www.reddit.com/r/iphone/comments/18c0dxg/will_the_iphone_model_in_the_exif_data_always_be/",
+            "site": "reddit.com",
+            "time": 1701855273000,
+            "favicon_url": "https://static.tickertick.com/website_icons/reddit.com.ico",
             "tags": [
                 "aapl"
             ],
-            "description": "Canada’s smartphone market faced a 4% year-over-year (YoY) sales decline, marking the second consecutive quarter of downturn amid rising inflation and economic challenges. Despite the usual boost from carrier promotions during back-to-school seasons and new smartphone launches, affordability issues have led to a longer replacement cycle and a shift in focus towards Bring Your Own […] The post Canadian Smartphone Sales Dip Again, Apple Still Leads Marketshare first appeared on iPhone in Canada Blog.",
-            "tickers": [
-                "aapl"
-            ]
-        },
-        {
-            "id": "-8117697156660222416",
-            "title": "Inside Apple’s Secretive War to Protect iPhones from Hacking",
-            "url": "https://www.iphoneincanada.ca/2023/11/20/apple-war-to-protect-iphones-from-hacking/",
-            "site": "iphoneincanada.ca",
-            "time": 1700504134000,
-            "favicon_url": "https://static.tickertick.com/website_icons/iphoneincanada.ca.ico",
-            "tags": [
-                "aapl"
-            ],
-            "description": "Apple, in its pursuit to fortify its iPhones against potential security breaches, has assembled an exclusive team of hackers at a concealed site in Paris. The post Inside Apple’s Secretive War to Protect iPhones from Hacking first appeared on iPhone in Canada Blog.",
-            "tickers": [
-                "aapl"
-            ],
-            "img" : "https://www.iphoneincanada.ca/wp-content/uploads/2023/11/apple-lab-paris.JPG"
-        },
-        {
-            "id": "3503392461071719824",
-            "title": "HandBrake 1.7 - Adds Apple VideoToolbox hardware presets and support for selecting ...",
-            "url": "https://tidbits.com/watchlist/handbrake-1-7/",
-            "site": "tidbits.com",
-            "time": 1700504127000,
-            "favicon_url": "https://static.tickertick.com/website_icons/tidbits.com.ico",
-            "tags": [
-                "aapl"
-            ],
-            "description": "Adds Apple VideoToolbox hardware presets and support for selecting multiple files at once. (Free, 42.4 MB, macOS 10.13+)",
-            "tickers": [
-                "aapl"
-            ],
-            "img" : "https://tidbits.com/uploads/2018/04/HandBrake-1.1.0-icon-384x384-c-default.png"
-        },
-        {
-            "id": "5966670034219136550",
-            "title": "Lunar Lake-MX leak suggests Intel is serious about \"outcompeting\" Apple",
-            "url": "https://www.techspot.com/news/100904-lunar-lake-mx-leak-suggests-intel-serious-about.html",
-            "site": "techspot.com",
-            "time": 1700503920000,
-            "favicon_url": "https://static.tickertick.com/website_icons/techspot.com.ico",
-            "tags": [
-                "aapl"
-            ],
-            "description": "In 2021, Intel CEO Pat Gelsinger proudly discussed the company's long-term plan to win Apple's business back by \"outcompeting\" it. Ever since he returned to Team Blue, Gelsinger has been on a quest to demonstrate that Arm-based processors aren't a big threat to x86 in the consumer space and that...Read Entire Article",
-            "tickers": [
-                "aapl"
-            ],
-            "img" : "https://www.techspot.com/images2/news/bigimage/2023/11/2023-11-20-image-10-j_1100.webp"
-        },
-        {
-            "id": "-5932278731874317183",
-            "title": "Apple plans cellular connection in laptops, finally",
-            "url": "https://boingboing.net/2023/11/20/apple-plans-cellular-connection-in-laptops-finally.html",
-            "site": "boingboing.net",
-            "time": 1700503888000,
-            "favicon_url": "https://static.tickertick.com/website_icons/boingboing.net.ico",
-            "tags": [
-                "aapl"
-            ],
-            "description": "Apple's next generation of laptops, not to be in production for several years, will include cellular connections, reports MacRumors. But they won't be like the chipsets found in its phones and high-end tablets: the company plans to integrate it into its own system-on-a-chip. — Read the rest",
+            "description": "I'm trying to get somebody a phone case and the exif says iphone 14 pro max. Is there any chance it's actually a regular 14 or some other glitch? Obviously, asking them what phone they have could trigger suspicion submitted by /u/rather_corrupt [link] [comments] I'm trying to get somebody a phone case and the exif says iphone 14 pro max. Is there any chance it's actually a regular 14 or some other glitch? Obviously, asking them what phone they have could trigger suspicion submitted by /u/rather_corrupt [link] [comments]",
             "tickers": [
                 "aapl"
             ]
         },
         {
-            "id": "-3122061124785364303",
-            "title": "Report Details Apple’s Roadmap for OLED iPads and MacBooks",
-            "url": "https://www.iphoneincanada.ca/2023/11/20/2024-oled-ipads-macbooks-release-schedule/",
-            "site": "iphoneincanada.ca",
-            "time": 1700503602000,
-            "favicon_url": "https://static.tickertick.com/website_icons/iphoneincanada.ca.ico",
+            "id": "-5062748909726245644",
+            "title": "14 or 15? (Base Model) - My 64-gigabyte iPhone 12 Mini is barely functional. I want to ...",
+            "url": "https://www.reddit.com/r/iphone/comments/18c080o/14_or_15_base_model/",
+            "site": "reddit.com",
+            "time": 1701854519000,
+            "favicon_url": "https://static.tickertick.com/website_icons/reddit.com.ico",
             "tags": [
                 "aapl"
             ],
-            "description": "According to a recent report from ET News, Apple is set to shift towards OLED displays starting with the iPad Pro in 2024, followed by other iPad models. The post Report Details Apple’s Roadmap for OLED iPads and MacBooks first appeared on iPhone in Canada Blog.",
+            "description": "My 64-gigabyte iPhone 12 Mini is barely functional. I want to get a better iPhone update. I have two options: I can have an iPhone 14 (128 GB) or an iPhone 15 (128 GB). Indeed, there is a $130–150 pricing difference (14 is cheaper).Also im sort of a rough and tough user so i might occasionally drop my phone every once in a while. What would you advise me to purchase? submitted by /u/Aarav911 [link] [comments] My 64-gigabyte iPhone 12 Mini is barely functional. I want to get a better iPhone update. I have two options: I can have an iPhone 14 (128 GB) or an iPhone 15 (128 GB). Indeed, there is a $130–150 pricing difference (14 is cheaper).Also im sort of a rough and tough user so i might occasionally drop my phone every once in a while. What would you advise me to purchase? submitted by /u/Aarav911 [link] [comments]",
             "tickers": [
                 "aapl"
             ],
-            "img" : "https://cdn.iphoneincanada.ca/wp-content/uploads/2023/11/OLED-iPad-Pro-2024-2.jpg"
+            "img" : "https://cdn.mos.cms.futurecdn.net/ww4MsNgwTKzFeAcsBKNKXb-970-80.jpg.webp"
         },
         {
-            "id": "-5406011575746642141",
-            "title": "Apple Vision Pro Might Launch in March 2024, According to Reliable Leaker",
-            "url": "https://www.inverse.com/tech/apple-vision-pro-release-date-march-2024-rumor",
-            "site": "inverse.com",
-            "time": 1700503225000,
-            "favicon_url": "https://static.tickertick.com/website_icons/inverse.com.ico",
+            "id": "-341491030097240714",
+            "title": "Wear OS: Our top 12 tips and tricks for your new smartwatch",
+            "url": "https://www.androidpolice.com/wear-os-tips-tricks/",
+            "site": "androidpolice.com",
+            "time": 1701854480000,
+            "favicon_url": "https://static.tickertick.com/website_icons/androidpolice.com.ico",
             "tags": [
                 "aapl"
             ],
-            "description": "Apple's next next big product, the Vision Pro spatial computer headset, might launch within the first quarter of 2024 according to Apple reporter and leaker Mark Gurman. — Bloomberg/Bloomberg/Getty ImagesIf you haven’t already installed the public beta for iOS 17.2 and started capturing spatial video with an iPhone 15 Pro for viewing on Apple Vision Pro when it’s released in 2024, you should get on it.Word on the street — in Mark Gurman’s PowerOn newsletter on Bloomberg — is that Apple might be readying its Vision Pro “spatial computer” for a release “around March.” That would put the Vision Pro on schedule to launch in the “early next year” window that Apple has repeated several times since the device’s announcement at WWDC in June.Assuming Gurman is correct and the launch window doesn’t slip to later, we could be wearing the Vision Pro and air-gesturing our way around visionOS using its high-res color passthrough in a matter of months. We, as in customers in the U.S. where the Vision Pro will be launching first. The reset of the world will have to wait. All signs point to Apple nearing the last stretch before the Vision Pro is ready to go. In addition to letting anyone with the iOS 17.2 beta start recording spatial video with an iPhone 15 Pro, we’ve seen the latest visionOS beta reveal how to create a virtual “Persona” by holding the Vision Pro at arm’s length for creating a head scan.As I said in my hands-on back in June and in my second experience where I saw a spatial video I shot myself, the Vision Pro is a device that you will have to try for yourself before it clicks into place. The crisp color passthrough resolution, the intuitive hand and eye tracking, and top-notch spatial sound are so ahead of the competition that it makes even Meta’s impressive Quest 3 look like a toy.And try in person you will have to, according to Apple CEO Tim Cook. During its recent Q4 earnings call, Cook said Apple Stores will be the gateway to users experiencing the Vision Pro.“There's never been a product like the Vision Pro,” Cook told investors. “We're purposely bringing it out in our stores only, so we can really put a great deal of attention on the last mile of it. We'll be offering demos in the stores and it will be a very different process than the normal grab-and-go kind of process.”Of course, even if a demo of the Vision Pro’s magic-like eye and hand tracking sells you on the device, $3,500 is still a lot of money for people, even if there might be buy now, pay later (BNPL) options that could help split the cost into payment installments. I think a lot of potential buyers will have to try the Vision Pro out, and then ask themselves whether the experience will actually make their lives better. I know way too many people who bought an iPad in the early years expecting it to fully replace their laptops, only to be disappointed when it didn’t. It’s hard to say whether or not the Vision Pro will be able to replace MacBook Pros until we’ve used one for an extended period of time, but my hunch is that it won’t. The Vision Pro is a different kind of computing experience, one that’s more immersive, but also might be limited in its productivity scope at launch.",
+            "description": "Google's Wear platform is finally becoming an Apple Watch and Watch OS. Here's how to get the most out of your Android watch. Android watches running Wear OS have taken a while to catch on with watchmakers and the public. Since Wear OS is picking up steam, Android-based watches are getting a much-needed boost to help drive the industry forward. The Samsung Galaxy Watch 6 and Samsung Galaxy Watch 6 Classic are among the best smartwatches on the market. Google's newest wearable, the Google Pixel Watch 2, is also an appealing option for style-savvy shoppers. Watches from traditional market leaders like Fossil and Mobvoi have started getting the latest Wear OS 4 update or will soon.",
+            "tickers": [
+                "aapl"
+            ],
+            "img" : "https://static1.anpoimages.com/wordpress/wp-content/uploads/2022/01/Mobvoi-TicWatch-Pro-3-Ultra-GPS-review-bump.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5"
+        },
+        {
+            "id": "-9172206675737301723",
+            "title": "Beeper Mini Brings iMessage Support to Android Phones, Works Without Apple ID: How It Works",
+            "url": "https://www.gadgets360.com/apps/news/beeper-mini-imessage-for-android-phones-price-features-how-it-works-4638535#rss-gadgets-all",
+            "site": "gadgets360.com",
+            "time": 1701854258000,
+            "favicon_url": "https://static.tickertick.com/website_icons/gadgets360.com.ico",
+            "tags": [
+                "aapl"
+            ],
+            "description": "Beeper Mini was launched on Tuesday as a new messaging app bringing iMessage to Android smartphones. The new app from Beeper seems to avoid most of those privacy issues as it works locally on a user's smartphones and can even function without an Apple ID, according to the company.",
+            "tickers": [
+                "aapl"
+            ],
+            "img" : "https://i.gadgets360cdn.com/large/beeper_mini_1701851387571.jpg?downsize=950:*"
+        },
+        {
+            "id": "4777013699050977368",
+            "title": "Apple Inc. (NASDAQ:AAPL) is California Public Employees Retirement System's Largest Position",
+            "url": "https://www.marketbeat.com/instant-alerts/nasdaq-aapl-sec-filing-2023-12-06/",
+            "site": "marketbeat.com",
+            "time": 1701854228000,
+            "favicon_url": "https://static.tickertick.com/website_icons/marketbeat.com.ico",
+            "tags": [
+                "aapl"
+            ],
+            "description": "California Public Employees Retirement System increased its stake in shares of Apple Inc. (NASDAQ:AAPL - Free Report) by 1.4% during the second quarter, according to the company in its most recent disclosure with the SEC. The institutional investor owned 36,882,919 shares of the iPhone maker's sto",
             "tickers": [
                 "aapl"
             ]
         },
         {
-            "id": "7850228706898199784",
-            "title": "ITV I'm A Celebrity star Jamie Lynn Spears broke protocol before isolating from campmates",
-            "url": "https://www.mirror.co.uk/tv/tv-news/itv-im-celebrity-star-jamie-31484771",
+            "id": "1398703093027409107",
+            "title": "Fuming ITV I'm A Celebrity fans brand Jamie Lynn Spears' exit a 'fix' as she breaks cover",
+            "url": "https://www.mirror.co.uk/tv/tv-news/jamie-lynn-spears-breaks-cover-31607705",
             "site": "mirror.co.uk",
-            "time": 1700502486000,
+            "time": 1701854002000,
             "favicon_url": "https://static.tickertick.com/website_icons/mirror.co.uk.ico",
             "tags": [
                 "aapl"
             ],
-            "description": "Concerned ITV execs fear that Jamie Lynn Spears could quit I'm A Celebrity at the earliest opportunity after she appeared to isolate herself from the rest of the campmates",
+            "description": "Actress Jamie Lynn Spears left I'm A Celebrity... Get Me Out Of Here! on medical grounds after more than a week living in the jungle and has kept a relatively low-profile since",
             "tickers": [
                 "aapl"
-            ]
+            ],
+            "img" : "https://cdn.jwplayer.com/v2/media/Oxf37cpE/poster.jpg"
         },
         {
-            "id": "813950887182486402",
-            "title": "Morgan Stanley: iPhone weakness in China offset by rest of the world",
-            "url": "https://www.ped30.com/2023/11/20/apple-huawei-morgan-stanley/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=apple-huawei-morgan-stanley",
-            "site": "ped30.com",
-            "time": 1700502440000,
-            "favicon_url": "https://static.tickertick.com/website_icons/ped30.com.ico",
+            "id": "6799223115703710230",
+            "title": "Apple releases watchOS 10.2 Release Candidate",
+            "url": "https://www.geeky-gadgets.com/apple-releases-watchos-10-2-release-candidate-06-12-2023/",
+            "site": "geeky-gadgets.com",
+            "time": 1701853960000,
+            "favicon_url": "https://static.tickertick.com/website_icons/geeky-gadgets.com.ico",
             "tags": [
                 "aapl"
             ],
-            "description": "\"Huawei vs. the iPhone 15... and Apple's AI intentions were key topics of discussion at our 2023 AP Summit.\" — Analyst Erik Woodring.",
-            "tickers": [
-                "aapl"
-            ]
-        },
-        {
-            "id": "6685970142566633228",
-            "title": "Oled: these nine new Apple products which will benefit from it by 2027",
-            "url": "https://gettotext.com/oled-these-nine-new-apple-products-which-will-benefit-from-it-by-2027/",
-            "site": "gettotext.com",
-            "time": 1700502299000,
-            "favicon_url": "https://static.tickertick.com/website_icons/gettotext.com.ico",
-            "tags": [
-                "aapl"
-            ],
-            "description": "Oled technology is still rare at Apple. Only iPhones and Apple Watches are eligible. For large screens, the Apple firm is currently limited to mini-Led, and only for its high-end products: the 12.9” iPad Pro and 14” and 16” MacBook Pro with M1/M2 chips. /M3. According to a recent report, the transition to Oled is... Oled technology is still rare at Apple. Only iPhones and Apple Watches are eligible. For large screens, the Apple firm is currently limited to mini-Led, and only for its high-end products: the 12.9” iPad Pro and 14” and 16” MacBook Pro with M1/M2 chips. /M3. According to a recent report, the transition to Oled is fast approaching, with no fewer than nine products adopting this type of panel over the next three years. iPad and MacBook on the program ET News has provided a new batch of information surrounding Apple’s plans. According to the Taiwanese media, Oled should occupy an important place with the Apple company by 2027. For starters, iPads would adopt this screen technology very quickly. As many rumors indicate, Oled would first make its nest on iPad Pros in 2024, whether on the 11-inch or 12.9-inch model. This development would thus end the monopoly of the large screen model, which was the only tablet to feature the best screen technology from Apple: mini-Led. Two years later, the iPad mini and the iPad Air would switch to an Oled panel. Please note, we would be entitled to a mini model with a larger screen, going from 8.3 inches to 8.7 inches; For its part, the iPad Air would be available in 10.8-inch and 12.9-inch versions. However, not all iPads are in the same boat when it comes to Oled. Indeed, we would be entitled to an LTPO panel for the iPad Pro, compared to LTPS for the iPad mini and iPad Air. As a result, the Pro models would retain the exclusivity of ProMotion on the Apple tablet range, offering an adaptive refresh rate oscillating up to 120 Hz. To further differentiate its iPad Pros, Apple would consider offering a better Oled panel in 2027, according to ET News. The latter would include a color filter on the encapsulation (CoE filter), improving brightness while reducing energy consumption by 20%. In addition, this novelty would pave the way for an under-screen camera for iPads. Finally, Oled would arrive on Apple laptops in 2025. The 16-inch MacBook Pro which would be served first. The 14-inch model would follow in 2026, then the 13- and 15-inch MacBook Air in 2027. Advertising, your content continues below Source link -98",
+            "description": "Apple has released a new beta for the Apple Watch, watchOS 10.2 Release Candidate, and this new beta should be the same as the final version of watchOS 10.2 assuming that no issues are found in this release. Apple also released a range of other new betas simultaneously, including iOS 17.2 Release Candidate, macOS 14.2 […] The post Apple releases watchOS 10.2 Release Candidate appeared first on Geeky Gadgets.",
             "tickers": [
                 "aapl"
             ]
         }
     ],
-    "last_id": "6685970142566633228"
+    "last_id": "6799223115703710230"
 }
