@@ -35,7 +35,7 @@ const Signupemail = () => {
     } else {
       try {
         const res = await axios.post(
-          "https://sharebb-production.up.railway.app/verifyEmail",
+          "https://sharebb-production-7d9a.up.railway.app/verifyEmail",
           {
             email: form.email,
           }
@@ -64,7 +64,7 @@ const Signupemail = () => {
     setResend(false);
     try {
       const res = await axios.post(
-        "https://sharebb-production.up.railway.app/verifyEmail",
+        "https://sharebb-production-7d9a.up.railway.app/verifyEmail",
         {
           email: form.email,
         });
@@ -87,7 +87,7 @@ const Signupemail = () => {
     } else {
       try {
         const res = await axios.post(
-          "https://sharebb-production.up.railway.app/otp_verification",
+          "https://sharebb-production-7d9a.up.railway.app/otp_verification",
           {
             email: form.email,
             otp: form.otp,

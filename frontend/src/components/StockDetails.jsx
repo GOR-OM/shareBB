@@ -51,10 +51,10 @@ const StockDetails = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          "https://sharebb-production.up.railway.app/getdata"
+          "https://sharebb-production-7d9a.up.railway.app/getdata"
         );
         const res2 = await axios.get(
-          `https://sharebb-production.up.railway.app/ml_data?company=${params.id}`,
+          `https://sharebb-production-7d9a.up.railway.app/ml_data?company=${params.id}`,
           { headers }
         );
 

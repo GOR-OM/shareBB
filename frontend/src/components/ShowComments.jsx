@@ -15,7 +15,7 @@ const ShowComments = () => {
       "auth-token": token,
     };
     const res = await axios.post(
-      "https://sharebb-production.up.railway.app/getComments",
+      "https://sharebb-production-7d9a.up.railway.app/getComments",
       { company: `${params.id}` },
       { headers }
     );

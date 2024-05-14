@@ -28,7 +28,7 @@ const Profile = () => {
     setEditable(false);
     try {
       console.log(user);
-      const res = await axios.post("https://sharebb-production.up.railway.app/editProfile", user, {
+      const res = await axios.post("https://sharebb-production-7d9a.up.railway.app/editProfile", user, {
         headers,
       });
       if (res.status === 200) {

@@ -24,7 +24,7 @@ const Wishlist = () => {
   const handledelfav = async (e) => {
     try {
       const res = await axios.post(
-        'https://sharebb-production.up.railway.app/del-fav',
+        'https://sharebb-production-7d9a.up.railway.app/del-fav',
         {
           company: e,
         },
@@ -47,7 +47,7 @@ const Wishlist = () => {
 
   const getWishlistData = async () => {
     try {
-      // const res = await axios.get('https://sharebb-production.up.railway.app/getuser', {
+      // const res = await axios.get('https://sharebb-production-7d9a.up.railway.app/getuser', {
       //   headers,
       // });
       const favoriteCompanies = JSON.parse(localStorage.getItem('favoriteCompanies'));
@@ -57,7 +57,7 @@ const Wishlist = () => {
       if (storedData) {
         setAllCompaniesData(JSON.parse(storedData));
       } else {
-        const res = await axios.get('https://sharebb-production.up.railway.app/getdata');
+        const res = await axios.get('https://sharebb-production-7d9a.up.railway.app/getdata');
         const data = res.data;
         setAllCompaniesData(data);
         sessionStorage.setItem('priceAnalysisData', JSON.stringify(data));

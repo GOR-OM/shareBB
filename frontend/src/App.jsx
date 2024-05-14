@@ -56,7 +56,7 @@ function App() {
         'Content-Type': 'application/json',
         'auth-token': token1,
       };
-    const res = await axios.get('https://sharebb-production.up.railway.app/getuser', {
+    const res = await axios.get('https://sharebb-production-7d9a.up.railway.app/getuser', {
         headers,
       });
       const favoriteCompanies = res.data.favourites;

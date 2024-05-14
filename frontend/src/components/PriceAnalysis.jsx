@@ -29,7 +29,7 @@ const PriceAnalysis = () => {
             setShare(JSON.parse(cachedData));
           } else {
             // Fetch data from the backend
-            const res = await axios.get('https://sharebb-production.up.railway.app/getdata', {
+            const res = await axios.get('https://sharebb-production-7d9a.up.railway.app/getdata', {
               headers: headers,
             });
             const data = res.data;

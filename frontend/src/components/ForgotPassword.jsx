@@ -69,7 +69,7 @@ function Forgotpassword() {
       toast.error("Invalid Email");
     } else {
       const res = await axios.post(
-        "https://sharebb-production.up.railway.app/forgotPassword",
+        "https://sharebb-production-7d9a.up.railway.app/forgotPassword",
         {
           email: form.email,
         }
@@ -86,7 +86,7 @@ function Forgotpassword() {
     } else {
       try {
         const res = await axios.post(
-          "https://sharebb-production.up.railway.app/otp_verification",
+          "https://sharebb-production-7d9a.up.railway.app/otp_verification",
           {
             email: form.email,
             otp: form.otp,
@@ -111,7 +111,7 @@ function Forgotpassword() {
     setResend(false)
     try {
       const res = await axios.post(
-        "https://sharebb-production.up.railway.app/verifyEmail",
+        "https://sharebb-production-7d9a.up.railway.app/verifyEmail",
         {
           email: form.email,
         });
@@ -143,7 +143,7 @@ function Forgotpassword() {
     } else {
       try {
         const res = await axios.post(
-          "https://sharebb-production.up.railway.app/updatePassword",
+          "https://sharebb-production-7d9a.up.railway.app/updatePassword",
           {
             email: form.email,
             newPass: password.newPass,

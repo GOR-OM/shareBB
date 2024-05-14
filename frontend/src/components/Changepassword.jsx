@@ -96,7 +96,7 @@ function Changepassword() {
       };
       console.log(headers);
       const res = await axios.post(
-        "https://sharebb-production.up.railway.app/changePassword",
+        "https://sharebb-production-7d9a.up.railway.app/changePassword",
         { oldPass: password.oldPass, newPass: password.newPass },
         { headers: headers }
       );

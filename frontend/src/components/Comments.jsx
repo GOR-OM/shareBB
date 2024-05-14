@@ -24,7 +24,7 @@ const Comments =  () => {
   const handleUser=async (e)=>{
     try{
     
-      const res = await axios.get('https://sharebb-production.up.railway.app/getuser',{headers})
+      const res = await axios.get('https://sharebb-production-7d9a.up.railway.app/getuser',{headers})
     console.log(res)
     const username = res.data.username
     
@@ -50,7 +50,7 @@ const Comments =  () => {
   
     try {
       const res = await axios.post(
-        'https://sharebb-production.up.railway.app/addComments',
+        'https://sharebb-production-7d9a.up.railway.app/addComments',
         { comment: comments, company: `${params.id}`, username: username },
         { headers: headers }
       );
